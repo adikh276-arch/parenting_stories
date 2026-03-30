@@ -9,7 +9,7 @@
   :root { --bg: #FCE7F3; --primary: #EC4899; --ink: #831843; --primary-light: #FBCFE8; --primary-mid: #F8A5CC; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--ink); min-height: 100vh; overflow-x: hidden; }
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--primary-mid); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; background: rgba(236,72,153,0.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--primary-mid); }
   .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--primary); display: none; cursor: pointer; }
   .nav-logo.visible { display: block; }
   .nav-tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: var(--primary); color: white; padding: 4px 12px; border-radius: 100px; }
@@ -44,7 +44,7 @@
   .card-body { padding: 1.4rem 1.6rem; flex: 1; }
   .card-top { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem; }
   .card-avatar { width: 52px; height: 52px; border-radius: 50%; overflow: hidden; border: 2.5px solid var(--primary); flex-shrink: 0; }
-  .card-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .card-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
   .card-name { font-weight: 600; font-size: 1rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
   .card-tag { font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 100px; background: var(--primary-light); color: var(--primary); }
   .card-quote { font-size: 0.92rem; color: #be185d; font-style: italic; line-height: 1.6; }
@@ -53,7 +53,7 @@
   .story-name-large { font-family: 'DM Serif Display', serif; font-size: 2.4rem; margin-bottom: 0.5rem; }
   .story-identity-badge { display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 5px 14px; border-radius: 100px; border: 1.5px solid; margin-bottom: 2rem; }
   .portrait-wrap { width: 100%; height: 340px; border-radius: 20px; overflow: hidden; margin-bottom: 2rem; background: var(--primary-light); }
-  .portrait-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .portrait-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
   .story-body p { font-size: 1.05rem; line-height: 1.85; color: #be185d; margin-bottom: 1.4rem; }
   .story-highlight { border-left: 4px solid; padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; font-size: 1.05rem; font-style: italic; font-weight: 500; line-height: 1.7; margin: 2rem 0; }
   .story-takeaway { border: 1.5px solid; border-radius: 16px; padding: 1.4rem 1.6rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.75; color: #be185d; }
@@ -102,8 +102,8 @@
 const stories = [
   {
     name: "James", age: 34, identity: "Parental Burnout",
-    avatar_url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1528892952291-009c663ce843?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1528892952291-009c663ce843?w=800&h=500&fit=crop",
     quote: "I loved my kids and I was drowning at the same time.",
     story: ["Parental burnout is a particular kind of exhaustion because the solution — taking a break — feels impossible when you're the only stable adult. I was working full-time, managing the household, doing childcare, and managing everyone's emotional needs but my own.", "By my children's sixth and eighth years, I was functioning on empty. I was irritable with the kids over small things. I had no patience. I felt guilty constantly. I was resentful of my partner for not helping enough, even though objectively she was helping.", "The breaking point came when I snapped at my daughter over something minor and saw her face crumple. I realised I was becoming someone I didn't want to be — a parent who was always frustrated, always depleted.", "I had to get help. Therapy helped me see that I was trying to be the perfect parent and the perfect provider simultaneously, which is impossible. I learned to ask for support, to lower my standards for household perfection, to actually take time for myself.", "My kids now have a parent who is present and patient instead of just present and exhausted. The irony is that investing in my own mental health has made me a better parent."],
     highlight: "You cannot be a good parent from an empty cup. Your mental health is inseparable from your parenting.",
@@ -111,8 +111,8 @@ const stories = [
   },
   {
     name: "Lisa", age: 29, identity: "Postpartum Anxiety",
-    avatar_url: "https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=500&fit=crop",
     quote: "I had a beautiful healthy baby and couldn't stop imagining worst-case scenarios.",
     story: ["Postpartum anxiety is different from postpartum depression, though they often occur together. I wasn't depressed — I was hyper-vigilant. I was scanning for danger constantly. Every rash might be meningitis. Every temperature fluctuation was catastrophic. I couldn't sleep even when the baby slept because my mind was in overdrive.", "People kept saying 'just enjoy this time' and 'it goes so fast.' I was trying to enjoy it but my brain was producing elaborate disaster scenarios with meticulous detail. I felt trapped between wanting to bond with my baby and needing to control every variable to keep her safe.", "I was so focused on what could go wrong that I wasn't present for what was actually happening. I have few memories of the first months because I was too anxious to fully experience them.", "Getting help was the best thing I did. Therapy helped me distinguish between reasonable caution and catastrophic thinking. Medication helped quiet the anxious thoughts enough that I could sleep and rest. It took time, but gradually I was able to be with my daughter without simultaneously running disaster simulations.", "I'm on the other side now. I still worry — that's parenting — but I'm worrying about actual things rather than elaborate hypotheticals. I'm present with my daughter rather than just vigilant around her."],
     highlight: "Postpartum anxiety lies to you about danger. Help from a professional can restore your sense of reality.",
@@ -120,8 +120,8 @@ const stories = [
   },
   {
     name: "Marcus", age: 41, identity: "Parenting With Depression",
-    avatar_url: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&h=500&fit=crop",
     quote: "I was depressed and trying to hide it from my kids while falling apart.",
     story: ["Depression and parenting are a difficult combination because the depression makes everything feel impossible while parenting requires constant effort. I was exhausted in a bone-deep way. Getting out of bed required mobilising an enormous amount of energy. Being present and engaged with my kids felt impossible.", "I was trying to hide it because I thought if they knew I was struggling, they would worry. I put on a mask of functionality while internally everything felt grey and hopeless. The cognitive dissonance between who I was trying to appear to be and how I actually felt was exhausting.", "My teenage son eventually said to me: 'Dad, I notice you're not okay. I'd rather you be honest about it than pretend.' That broke through my denial. My kids were noticing the mask anyway, and it was making them worry more than just knowing the truth would.", "Getting treatment meant medication and therapy specifically around parenting with mental illness. It meant talking to my kids in age-appropriate ways about my depression. It meant not expecting myself to be perfect while I was struggling.", "My kids actually understand mental health better because of my honesty. They're not afraid of depression — they've seen that it's treatable and that their dad can have it and still love them and care for them."],
     highlight: "You don't have to hide your mental health from your kids. Honesty is often kinder than pretending.",
@@ -129,8 +129,8 @@ const stories = [
   },
   {
     name: "Sophia", age: 36, identity: "Single Parent Stress",
-    avatar_url: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=500&fit=crop",
     quote: "I was the only adult. That weight never felt lighter.",
     story: ["Single parenting is like having a full-time job and another full-time job simultaneously, with no breaks and no backup. I was responsible for everything: childcare, work, household, finances, emotional support, discipline, everything. The weight of sole responsibility was immense.", "There was no one to tag in when I was at my limit. No one to take the kids for the weekend so I could rest. No one to help with decisions. The loneliness of it was as hard as the labour.", "I developed anxiety and depression from the chronic stress and isolation. I was managing kids' needs, work demands, and my own mental health crisis, and there was nowhere to put any of it down.", "Support from community and professionals made a difference. A therapist who understood single parenting. A local parent group. Practical help from family. Permission to ask for help rather than trying to do everything myself. These things gradually made things more sustainable.", "I'm still the sole adult. That hasn't changed. But I'm less alone, and I'm taking better care of my own mental health, which makes me a better parent."],
     highlight: "Single parenting is labour-intensive and isolating. Community support isn't a luxury — it's a necessity.",
@@ -138,8 +138,8 @@ const stories = [
   },
   {
     name: "David", age: 45, identity: "Parenting Teenagers",
-    avatar_url: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&h=500&fit=crop",
     quote: "My kids became strangers and I didn't know how to parent that.",
     story: ["Parenting teenagers is a disorienting experience. The person you knew changed into someone you don't quite understand. My daughter went from being close to me to barely speaking to me. My son became secretive and withdrawn. I felt like I had failed somehow.", "Parenting teens requires a different skill set than parenting younger children, and no one really prepares you for that transition. I was still using parenting approaches that worked when they were eight, and they were completely ineffective at fourteen.", "I was anxious about what they were doing, who they were with, whether they were safe. I was also acutely aware that if I were too controlling or nosy, I would damage our relationship further. The balance between protection and autonomy felt impossible to find.", "Parenting classes helped. A therapist helped. But mostly I had to accept that this is a developmental stage and my job had changed. My job was no longer to manage their life but to be a stable adult while they learned to manage it themselves.", "We're on the other side now. We have a different relationship than when they were younger, but we have one. I'm learning who these people are becoming, and there's something beautiful in that."],
     highlight: "Your teenager's distance is not rejection of you; it's developmentally necessary. Show up steadily anyway.",
@@ -147,8 +147,8 @@ const stories = [
   },
   {
     name: "Amy", age: 38, identity: "Parenting With Neurodivergence",
-    avatar_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=800&h=500&fit=crop",
     quote: "My ADHD and my kids' needs collided in ways I didn't expect.",
     story: ["I have ADHD and didn't realise how much my coping strategies for it would be disrupted by parenting. Organisation, time management, emotional regulation — areas I already struggled with — became even more difficult with the demands of parenting.", "My kids would need consistency and I struggled to provide it because my executive function was inconsistent. They needed routine and I found it hard to maintain. I felt like I was failing at parenting and also like my brain wasn't cooperating.", "Getting diagnosed and treated for my ADHD made an enormous difference. Medication helped my executive function. Therapy helped me develop realistic strategies rather than expecting myself to function like a neurotypical parent. Understanding my brain rather than fighting it helped.", "I also had to let go of perfectionism around parenting. I'm not the kind of parent who can maintain immaculate systems or coordinate complex schedules. But I'm present and engaged and I love my kids. That matters more than organisation.", "My kids are seeing a parent who is honest about their limitations and still shows up. That's a better model than pretending I'm something I'm not."],
     highlight: "Your parenting won't look like someone else's. Your unique brain brings unique gifts to parenting.",
@@ -209,8 +209,8 @@ function showStory(index) {
     <span class="story-identity-badge" style="background:#FBCFE8;color:#EC4899;border-color:#EC4899">${s.identity}</span>
     <div class="portrait-wrap"><img src="${s.portrait_url}" alt="${s.name}"/></div>
     <div class="story-body">${storyParas}</div>
-    <div class="story-highlight" style="border-color:#EC4899;background:#FBCFE8;color:#831843">"${s.highlight}"</div>
-    <div class="story-takeaway" style="border-color:#EC4899;background:rgba(255,255,255,0.8)">
+    <div class="story-highlight" style="border-color:#EC4899;background:#FBCFE8;color:#EC4899">"${s.highlight}"</div>
+    <div class="story-takeaway" style="border-color:#EC4899;background:rgba(236,72,153,0.8)">
       <span class="takeaway-label" style="color:#EC4899">👨‍👩‍👧 Something to sit with</span>
       ${s.takeaway}
     </div>
