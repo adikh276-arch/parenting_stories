@@ -205,7 +205,7 @@ function renderCards() {
       <div class="card-stripe"></div>
       <div class="card-body">
         <div class="card-top">
-          <div class="card-avatar"><img src="${s.avatar_url}" alt="${s.name}"/></div>
+          
           <div class="card-name-wrap">
             <div class="card-name">${s.name}, ${s.age} <span class="card-tag">${s.identity}</span></div>
           </div>
@@ -229,7 +229,7 @@ function showStory(index) {
     <div class="story-hero-band"></div>
     <h1 class="story-name-large">${s.name}, ${s.age}</h1>
     <span class="story-identity-badge" style="background:#FBCFE8;color:#EC4899;border-color:#EC4899">${s.identity}</span>
-    <div class="portrait-wrap"><img src="${s.portrait_url}" alt="${s.name}"/></div>
+    
     <div class="story-body">${storyParas}</div>
     <div class="story-highlight" style="border-color:#EC4899;background:#FBCFE8;color:#EC4899">"${s.highlight}"</div>
     <div class="story-takeaway" style="border-color:#EC4899;background:rgba(236,72,153,0.8)">
@@ -243,6 +243,6 @@ function showStory(index) {
 
 showHero();
 </script>
-<script src="/i18n/loader.js"></script>
+<script src="./i18n/loader.js"></script>
 </body>
 </html>
